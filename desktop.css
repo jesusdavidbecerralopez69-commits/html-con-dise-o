@@ -1,0 +1,245 @@
+/* ============================================== */
+/* ESTILOS BASE (DESKTOP - Por Defecto) */
+/* ============================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+section {
+    padding: 30px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 1: Fondo de Color Adaptativo (Desktop Base) */
+/* ---------------------------------------------------- */
+#color-fondo {
+    background-color: #007bff; /* Azul oscuro (Desktop) */
+    color: white;
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 5: Menú adaptable (Desktop Base) */
+/* ---------------------------------------------------- */
+#menu-adaptable nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Horizontal por defecto */
+    justify-content: flex-end;
+    background-color: #343a40;
+}
+
+#menu-adaptable nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 2 & 6: Breakpoints y Fuentes (Desktop Base) */
+/* ---------------------------------------------------- */
+.elemento-disposicion {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: inline-block; /* Elementos alineados horizontalmente */
+    width: 30%; 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.texto-adaptativo {
+    font-size: 24px; /* Tamaño grande por defecto (Desktop) */
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 7: Galería (Desktop: 4 columnas) */
+/* ---------------------------------------------------- */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
+    gap: 15px;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 8: Tarjeta (Desktop: Alineadas en 3 columnas) */
+/* ---------------------------------------------------- */
+.tarjeta-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tarjeta {
+    flex: 1 1 30%; /* 3 columnas */
+    border: 1px solid #007bff;
+    padding: 15px;
+    background-color: #e6f2ff;
+}
+
+.formulario-reorganizar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.grupo-campo label, .grupo-campo input, .grupo-campo textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.campo-largo {
+    grid-column: span 3; 
+}
+
+html {
+    font-size: 12px; 
+}
+
+.texto-rem {
+    font-size: 2.5rem; 
+    padding: 1em; 
+}
+
+.imagen-responsive {
+    height: 300px;
+    background: url('desktop-bg.jpg') no-repeat center center/cover;
+    border: 5px solid #007bff;
+}
+
+
+@media (max-width: 1200px) {
+  
+    .texto-adaptativo {
+        font-size: 20px;
+    }
+    
+   
+    html {
+        font-size: 10px;
+    }
+
+
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 992px) {
+   
+    #color-fondo {
+        background-color: darkgreen;
+    }
+
+ 
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .tarjeta {
+        flex: 1 1 45%; 
+    }
+
+    .formulario-reorganizar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .campo-largo {
+        grid-column: span 2;/
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    #color-fondo {
+        background-color: darkred;
+    }
+
+ 
+    #menu-adaptable nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    
+    .elemento-disposicion {
+        display: block; 
+        width: 100%; 
+    }
+
+    .texto-adaptativo {
+        font-size: 16px;
+    }
+
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+  
+    .tarjeta-contenedor {
+        flex-direction: column; 
+    }
+    
+    .tarjeta {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+    
+    .formulario-reorganizar {
+        grid-template-columns: 1fr; 
+    }
+    
+    .campo-largo {
+        grid-column: span 1;
+    }
+
+ 
+    .imagen-responsive {
+        height: 150px;
+        background-image: url('mobile-bg.jpg');
+        border-color: darkred;
+    }
+}
+
+
+@media print {
+    body {
+        background-color: white !important;
+        color: black;
+    }
+    header, footer, .imagen-responsive {
+        display: none;
+    }
+    section {
+        border: none;
+        page-break-after: always;
+    }
+}
+body{
+  background-color: blueviolet;
+}
+@media(min-width:500px){
+  body{
+    background-color: #b5be98;
+  }
+}

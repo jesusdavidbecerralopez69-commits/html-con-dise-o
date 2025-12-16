@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Adaptativo - Desktop First</title>
+    <link rel="stylesheet" href="desktop.css">
+</head>
+<body>
+    <header id="menu-adaptable">
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="color-fondo">
+       
+        </section>
+
+        <section id="breakpoints-fuentes">
+            <h1>2 & 6. Disposición y Fuentes (Desktop First)</h1>
+            <div class="elemento-disposicion">Desktop A</div>
+            <div class="elemento-disposicion">Desktop B</div>
+            <div class="elemento-disposicion">Desktop C</div>
+         
+        </section>
+        
+        <section id="galeria-goku">
+        </h1>
+            <div class="galeria">
+                <img src="recursos/Bardock_Artwork.webp" alt="Goku Imagen 1">
+                <img src="recursos/celula.webp" alt="Goku Imagen 2">
+                <img src="recursos/15Dokkan copy 4.webp" alt="Goku Imagen 3">
+                <img src="recursos/17_Artwork.webp" alt="Goku Imagen 4">
+            </div>
+        </section>
+
+        <section id="tarjeta-apilable">
+            <h1>8. Tarjetas Alineadas </h1>
+            <div class="tarjeta-contenedor">
+                <div class="tarjeta"><h3>Tarjeta 1</h3><p>Contenido de la primera tarjeta.</p></div>
+                <div class="tarjeta"><h3>Tarjeta 2</h3><p>Contenido de la segunda tarjeta.</p></div>
+                <div class="tarjeta"><h3>Tarjeta 3</h3><p>Contenido de la tercera tarjeta.</p></div>
+            </div>
+        </section>
+        
+        <section id="formulario-adaptativo">
+            <h1>(3 Columnas por Defecto)</h1>
+            <form class="formulario-reorganizar">
+                <div class="grupo-campo"><label for="nombre">Nombre:</label><input type="text" id="nombre"></div>
+                <div class="grupo-campo"><label for="email">Email:</label><input type="email" id="email"></div>
+                <div class="grupo-campo campo-largo"><label for="mensaje">Mensaje:</label><textarea id="mensaje"></textarea></div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        
+</body>
+</html>

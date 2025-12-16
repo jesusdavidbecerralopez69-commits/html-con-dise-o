@@ -1,11 +1,11 @@
 /* Estilos generales */
 body {
     
-  background-color: blueviolet;
+  background-color: rgb(26, 15, 37);
 }
 @media(min-width:500px){
   body{
-    background-color: #bfff01;
+    background-color: #999999;
   }
 }
     
