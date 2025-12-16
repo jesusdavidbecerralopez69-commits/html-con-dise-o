@@ -1,0 +1,246 @@
+/* Estilos generales */
+body {
+    
+  background-color: blueviolet;
+}
+@media(min-width:500px){
+  body{
+    background-color: #bfff01;
+  }
+}
+    
+section {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    font-size: 1.5em; /* Base font size */
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 1: Fondo de Color Adaptativo (Mobile First) */
+/* ---------------------------------------------------- */
+#color-fondo {
+    background-color: lightgreen; /* Estilo por defecto (Móvil) */
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 5: Menú adaptable (Mobile First) */
+/* ---------------------------------------------------- */
+#menu-adaptable nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Alineación horizontal en móvil */
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    background-color: #333;
+}
+
+#menu-adaptable nav ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 2 & 6: Breakpoints y Fuentes (Mobile First) */
+/* Disposición en una columna (por defecto) */
+/* Tamaño de fuente base (Móvil) */
+/* ---------------------------------------------------- */
+.elemento-disposicion {
+    background-color: #f00;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.texto-adaptativo {
+    font-size: 14px; /* Tamaño de fuente por defecto (Móvil) */
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 7: Galería (Móvil: 1 columna) */
+/* ---------------------------------------------------- */
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto */
+    gap: 10px;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 8: Tarjeta (Móvil: Apiladas) */
+/* ---------------------------------------------------- */
+.tarjeta-contenedor {
+    display: block; /* Por defecto se apilan (Bloque) */
+}
+
+.tarjeta {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 10: Formulario (Móvil: Apilado) */
+/* ---------------------------------------------------- */
+.formulario-reorganizar {
+    display: flex;
+    flex-direction: column; /* Apilado por defecto */
+    gap: 10px;
+}
+
+.grupo-campo label, .grupo-campo input, .grupo-campo textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 11: Unidades Relativas (EM/REM) */
+/* ---------------------------------------------------- */
+html {
+    font-size: 10px; /* Base 1rem = 10px (fácil de calcular) */
+}
+
+.texto-rem {
+    font-size: 2rem; /* 20px en móvil */
+    padding: 1em; /* 20px de padding (depende del tamaño de la fuente del elemento) */
+}
+
+/* ---------------------------------------------------- */
+/* EJERCICIO 12: Imagen Distinta (Móvil) */
+/* ---------------------------------------------------- */
+.imagen-responsive {
+    height: 150px;
+    background: url('mobile-bg.jpg') no-repeat center center/cover; /* Imagen de móvil */
+}
+
+/* ---------------------------------------------------- */
+/* Breakpoints (EJERCICIO 2 & 6) */
+/* ---------------------------------------------------- */
+
+/* Breakpoint 1: min-width: 768px (Tablet/Escritorio pequeño) */
+@media (min-width: 768px) {
+    /* EJERCICIO 1: Cambio de color de fondo */
+    #color-fondo {
+        background-color: lightblue;
+    }
+    
+    /* EJERCICIO 2: Disposición */
+    #breakpoints-fuentes .elemento-disposicion {
+        float: left; /* Cambia la disposición a flotante */
+        width: 48%; /* Dos columnas */
+        margin-right: 4%;
+    }
+
+    /* EJERCICIO 6: Tamaño de fuentes */
+    .texto-adaptativo {
+        font-size: 16px;
+    }
+
+    /* EJERCICIO 5: Menú */
+    #menu-adaptable nav ul {
+        flex-wrap: nowrap; /* Menú en una línea */
+    }
+
+    /* EJERCICIO 7: Galería (2 columnas) */
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* EJERCICIO 8: Tarjeta (Dos columnas) */
+    .tarjeta-contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .tarjeta {
+        flex: 1 1 calc(50% - 15px); /* Dos columnas */
+    }
+
+    /* EJERCICIO 10: Formulario (Dos columnas, menos el campo largo) */
+    .formulario-reorganizar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .grupo-campo {
+        flex: 1 1 calc(50% - 10px); /* 50% en tablet */
+    }
+
+    .campo-largo {
+        flex: 1 1 100%; /* Campo de mensaje a ancho completo */
+    }
+}
+
+/* Breakpoint 2: min-width: 992px (Escritorio medio) */
+@media (min-width: 992px) {
+    /* EJERCICIO 1: Cambio de color de fondo */
+    #color-fondo {
+        background-color: orange;
+    }
+    
+    /* EJERCICIO 2: Disposición (Ajuste de flotantes) */
+    #breakpoints-fuentes .elemento-disposicion {
+        float: none; /* Vuelve a la disposición normal de bloque */
+        width: auto;
+        margin-right: 0;
+    }
+    
+    /* EJERCICIO 6: Tamaño de fuentes */
+    .texto-adaptativo {
+        font-size: 20px;
+    }
+    
+    /* EJERCICIO 7: Galería (3 columnas) */
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* EJERCICIO 8: Tarjeta (Tres columnas) */
+    .tarjeta {
+        flex: 1 1 calc(33.333% - 15px);
+    }
+    
+    /* EJERCICIO 10: Formulario (Diseño más complejo) */
+    .grupo-campo {
+        flex: 1 1 calc(33.333% - 10px); /* Tres columnas */
+    }
+    
+    /* EJERCICIO 12: Imagen Distinta */
+    .imagen-responsive {
+        height: 300px;
+        background-image: url('desktop-bg.jpg'); /* Imagen de escritorio */
+    }
+}
+
+/* Breakpoint 3: min-width: 1200px (Escritorio grande) */
+@media (min-width: 1200px) {
+    /* EJERCICIO 6: Tamaño de fuentes */
+    .texto-adaptativo {
+        font-size: 24px;
+    }
+
+    /* EJERCICIO 7: Galería (4 columnas) */
+    .galeria {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* EJERCICIO 11: Unidades Relativas (Ajuste de REM) */
+    html {
+        font-size: 12px; /* Base 1rem = 12px (El texto-rem ahora será 24px) */
+    }
+}
